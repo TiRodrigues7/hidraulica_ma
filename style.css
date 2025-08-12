@@ -1,0 +1,1068 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to right,  rgb(6, 6, 39),rgb(23, 2, 82), rgb(13, 0, 37));
+    background-size: 500% 100%;
+    animation-name: degrade;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes degrade{
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+
+body .c2{
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+}
+
+h1 {
+    color: #ffffff; /* Letras brancas */
+    margin-top: 50px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+h2{
+    padding: 7% 0%;
+}
+p {
+    color: #ffffff; /* Letras brancas */
+    font-size: 1em;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 25px;
+    background-color: #ffffff; /* Fundo branco */
+    color: #003366; /* Texto azul escuro */
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+button:hover {
+    background-color: #e6e6e6; /* Cor de hover mais clara */
+}
+
+    /* Estilo do botão e do preload */
+#enviar-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    background: transparent;
+    border: 2px solid #f5f5f5;
+    color: #f5f5f5;
+    transition: all 1s;
+    margin-bottom: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#enviar-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.spinner {
+        display: none;
+        width: 20px;
+        height: 20px;
+        border: 3px solid #ffffff;
+        border-top: 3px solid #003366;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+a {
+text-decoration: none;
+}
+
+nav{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+}
+
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span{
+    color: #daa520;
+    text-shadow:#daa520 0.5px -0.5px, #daa520 -0.5px 0.5px, #daa520 0.5px 0.5px, #daa520 -0.5px -0.5px
+}
+
+.hamburg,
+.cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    display: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+
+.nav-container .links{
+    display: flex;
+}
+
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #1E3467;
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+
+.nav-container .links a:hover{
+    color: #1E3467;
+}
+
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow:  0 0 20px black;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover{
+    background-color: #1E3467;
+}
+
+section{
+    width: 100%;
+    height: 90vh;
+    padding: 2% 0%;
+    overflow:auto;
+}
+
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-container .image{
+    width: 500px;
+    height: 75vh;
+    border-radius: 5%;
+    overflow: auto;
+    box-shadow: 0 0 50px #1E3467;
+}
+
+.main-container .image img{
+    width: 100%;
+    height: 90%;
+}
+
+.main-container .image:hover{
+    animation: animate 1.5s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%{
+        scale: 1;
+    }
+    
+    50%{
+        scale: 1.05;
+    }
+    
+    100%{
+        scale: 1;
+    }
+}
+
+.main-container .content{
+    color: white;
+    width: 40%;
+    min-height: 100px;
+}
+
+.content h1{
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+
+.content h1 span{
+    color: #daa520;
+    text-shadow:#daa520 0.5px -0.5px, #daa520 -0.5px 0.5px, #daa520 0.5px 0.5px, #daa520 -0.5px -0.5px
+}
+
+.content .typewriter{
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-weight: 600;
+}
+
+.content .typewriter-text{
+    color: #daa520;
+    text-shadow:#daa520 0.5px -0.5px, #daa520 -0.5px 0.5px, #daa520 0.5px 0.5px, #daa520 -0.5px -0.5px
+}
+.content p{
+    font-size: clamp(0.4rem , 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid #daa520;
+    border-radius: 50%;
+    color: #daa520;
+    margin: 5px 15px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+
+.social-links i:hover{
+    scale: 1.3;
+    color: #daa520;
+    background-color: #1E3467;
+    filter: drop-shadow(0 0 10px #1E3467);
+}
+
+.content button{
+    width: 50%;
+    height: 6vh;
+    margin: 30px;
+    background-color: #1E3467;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 120%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.content button:hover{
+    scale: 1.1;
+    color: #1E3467;
+    border: 2px solid #1E3467;
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 40px #1E3467;
+}
+
+@media (max-width:1224px) {
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-container .links{
+        display: none;
+    }
+
+    .hamburg,
+    .cancel{
+        display: block;
+    }
+
+    .main-container .content{
+        width: 90%;
+    }
+
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .main-container .image{
+        z-index: -1;
+        width: 35%;
+        height: 37%;
+    }
+}
+
+@media (max-width:440px){
+    .main-container .image{
+        margin-top: -15px;
+        width: 40%;
+        height: 30%;
+        margin-bottom: 0px;
+    }
+
+    .main-container .content{
+        width: 90%;
+    }
+
+    .main-container button{
+        padding: 10px 20px;
+        margin-top: 15px;
+    }
+}
+/* Estilo do rodapé */
+footer {
+    width: 100%;
+    background-color: transparent;
+    border-top: 2px solid white;
+    padding: 20px 0;
+    color: white;    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex-basis: 30%;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-column p, .footer-column ul {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #1E3467;
+}
+
+.social-icons-rodape a {
+    color: white !important;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons-rodape a:hover {
+    color: #1E3467;
+    transform: scale(1.2);
+}
+
+.social-icons-sobre {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os ícones se reorganizem em telas menores */
+    gap: 50px; /* Espaçamento entre os ícones */
+}
+
+.social-icons-sobre a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px; /* Define um tamanho para os ícones */
+    height: 80px;
+    background-color: #1E3467; /* Fundo dos ícones */
+    border-radius: 50%; /* Ícones circulares */
+    color: white !important;
+    font-size: 2.5rem; /* Tamanho dos ícones */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons-sobre a:hover {
+    color: #daa520; /* Cor dourada no hover */
+    transform: scale(1.2); /* Efeito de ampliação no hover */
+}
+
+/* Responsividade */
+
+/* Telas menores (smartphones) */
+@media (max-width: 600px) {
+    .social-icons-sobre {
+        flex-direction: column; /* Coloca os ícones em uma coluna no mobile */
+        gap: 20px;
+    }
+}
+
+/* Telas maiores (tablets e desktops) */
+@media (min-width: 600px) {
+    .social-icons-sobre {
+        flex-direction: row; /* Mantém os ícones em linha */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+}
+
+
+body .body2{
+
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #101026;
+}
+section .sec2{
+    margin-top: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3% 7%;
+    background: #1d1d2e;
+    width: 100%;
+    height: 850px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+section h2{
+    color: #f5f5f5;
+    font-size: 2.5rem;
+    margin: 0.5rem;
+}
+section form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+ 
+}
+form label{
+    color: #f5f5f5;
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+form input{
+    padding: 15px;
+    outline: none;
+    border: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+form input:focus{
+    border-radius: 16px;
+}
+form textarea{
+    padding: 10px;
+    outline: none;
+    border: 0;
+    font-size: 15px;
+    margin-bottom: 15px;
+    transition: all 0.5s;
+}
+form textarea:focus{
+    border-radius: 16px;
+}
+form button{
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    background: transparent;
+    border: 2px solid #f5f5f5;
+    color: #f5f5f5;
+    transition: all 1s;
+    margin-bottom: 20px;
+}
+form button:hover{
+    background: #f5f5f5;
+    color: #101026;
+    border-radius: 16px;
+}
+
+/*Página do Obrigado*/
+
+.main{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   background: #101026;
+   flex-direction: column;
+}
+.text{
+    font-size: 45px;
+    color: #f5f5f5;
+    margin-bottom: 30px;
+}
+.paragrafo{
+    color: #f5f5f5;
+    margin-bottom: 50px;
+}
+.btn2{
+    padding: 15px 55px;
+    background: #f5f5f5;
+    text-decoration: none;
+    color: #101026;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+.btn2:hover{
+    border-radius: 16px;
+}
+
+/* Configurações básicas */
+body .bg3{
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Cor de fundo definida */
+    color: #000000;
+    margin: 0;
+    padding: 0.5% 1.25%;
+    text-align: center;
+    overflow-x: hidden; /* Previne rolagem horizontal */
+}
+
+html, body .bg3 {
+    height: 100%;
+}
+
+/* Configura rolagem sobre o conteúdo */
+main {
+    max-height: 100vh;
+    overflow-y: auto; /* Ativa a rolagem */
+    padding: 20px;
+}
+
+/* Outros estilos mantidos */
+
+h1 .bg3{
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding: 20px;
+    background-color: #333;
+    border: 2px solid #555;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease;
+}
+
+h2 {
+ color: #000;
+ font-weight: bold;
+ text-align: center;
+}
+
+.pbg3{
+    color: #222121 !important;
+    text-align: justify !important;
+}
+
+.rodape{
+    color: #ffffff !important;
+    font-weight: 900 !important;
+    text-align: justify !important;
+}
+
+.blog-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    padding: 20px !important;
+}
+
+.post {
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideIn 0.5s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.post img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.post h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.post p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn3 {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn3:hover {
+    background-color: #555;
+}
+
+.btn3 span {
+    margin-left: 5px;
+}
+
+/* Exibição de resultados */
+.result-info {
+    text-align: right;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #333;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); }
+    to { transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .post {
+        width: 100%;
+    }
+}
+/* Continua com os estilos adicionais, como imagens e animações */
+/* POST1 Reseta margens e espaçamentos */
+
+body .body-pg1{
+    font-family: Arial, sans-serif;
+    background-color: #1E3467; /* Cor de fundo conforme solicitado */
+    color: white;
+    line-height: 1.6;
+}
+
+/* Conteúdo */
+.content-post1 {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: justify;
+}
+
+.content-post1 p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+.content-post1 img {
+    max-width: 100%;
+    height: auto;   
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body .body-pg1 {
+        font-size: 90%;
+    }
+
+    .content-post1 {
+        padding: 10px;
+    }
+
+}
+
+/* Tema da página */
+.theme-title {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding: 20px;
+    background-color: #333;
+    border: 2px solid #555;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease;
+    margin: 20px 10px;
+}
+
+/* Portfólio */
+.portfolio {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Grade de imagens do portfólio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.portfolio-item {
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.1);
+}
+
+.portfolio-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Estilo das miniaturas */
+.img-thumbnail {
+    border: 2px solid #555;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 520px){
+    .portfolio-grid {
+        display: inline !important;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+    }
+}
+
+ul {
+    color: #ffffff;
+
+}
+
+.gold-text {
+    color: #daa520; /* Cor dourado */
+    text-align: center;
+}
+
+.light-gold-text {
+    color: #ffd700; /* Cor dourado pouco mais claro */
+}
+
+.content-post1 p {
+    color: #ffffff; /* Letras brancas */
+    text-align: justify;
+}
+
+
+
+
+.mvv-section {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.mvv-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna para dispositivos móveis */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Adiciona um pouco de padding nas laterais em telas menores */
+}
+
+.mvv-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.mvv-item:hover {
+    transform: scale(1.05);
+}
+
+.mvv-item i {
+    font-size: 50px;
+    color: #daa520; /* Cor dourada */
+    margin-bottom: 15px;
+}
+
+.mvv-item h3 {
+    color: #000000;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.mvv-item p {
+    font-size: 1rem;
+    color: #666;
+    text-align: justify;
+}
+
+/* Estilos responsivos */
+
+/* Para tablets (mínimo de 768px), usar 2 colunas */
+@media (min-width: 768px) {
+    .mvv-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Para desktops (mínimo de 1024px), usar 3 colunas */
+@media (min-width: 1024px) {
+    .mvv-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .mvv-item {
+        width: 100%;
+    }
+}
+
+
+
+
+.contact-container {
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-item i {
+    font-size: 34px;
+    color: #daa520; /* Cor dourada para os ícones */
+    margin-right: 15px;
+}
+
+.contact-item p {
+    margin: 20px;
+}
+
+.contact-item a {
+    color: #0f1ddf; /* Cor do link */
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.map-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Proporção de 16:9 para o iframe */
+    position: relative;
+    margin-top: 20px;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsividade */
+
+@media (min-width: 768px) {
+    .contact-container {
+        padding: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .contact-item {
+        flex-basis: 48%; /* Alinhar em duas colunas em tablets e telas maiores */
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-item {
+        flex-basis: 30%; /* Alinhar em três colunas em desktops */
+    }
+    .map-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+/* Estilo do botão "Solicite um orçamento" */
+.quote-request {
+    margin-top: -55px;
+    display: flex;
+    align-items: center; /* Centraliza o ícone e o texto verticalmente */
+    font-size: 2.25rem; /* Tamanho do texto */
+    color: #e0bf03; /* Cor do texto */
+    font-family: 'Arial', sans-serif; /* Fonte padrão */
+}
+
+.quote-request i {
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    font-size: 2rem; /* Tamanho do ícone */
+    color: #b89c02; /* Cor do ícone */
+}
+
+.quote-request strong {
+    font-weight: bold; /* O texto "orçamento!" em negrito */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .quote-request {
+        margin-top: -15px !important;
+        font-size: 1.2rem; /* Reduz o tamanho do texto em telas menores */
+    }
+
+    .quote-request i {
+        font-size: 1.5rem; /* Reduz o tamanho do ícone em telas menores */
+    }
+}

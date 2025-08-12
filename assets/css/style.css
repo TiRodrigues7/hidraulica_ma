@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'gillbold';
+    src: url('fonts/gill_sans_ultra_bold-webfont.woff2') format('woff2'),
+         url('fonts/gill_sans_ultra_bold-webfont.woff') format('woff'),
+         url('fonts/gill_sans_ultra_bold.otf') format('otf');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+.preto-gradiente {
+  background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%) !important;
+  color: black; !important;
+  text-shadow: 3px white !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+
+}
+
+.gradient-efeito {
+ 
+  height: 104px;
+  background: linear-gradient(45deg, yellowgreen, green, yellow, red);
+  background-size: 400% 100% !important;
+  animation: degrade 15s linear infinite alternate !important;
+  font-family: 'gillbold';
+  font-size: 80px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  outline: none;
+
+}
+.gradient-efeito-01 {
+ 
+  height: 104px;
+  background: linear-gradient(45deg, yellowgreen, green);
+  background-size: 400% 100% !important;
+  animation: degrade 15s linear infinite alternate !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  outline: none;
+
+}
+.contorno{
+  text-shadow: 10px 10px 10px white;
+}
+/* CSS */
+.botao-cad {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 400% 100% !important;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-size: 38px;
+  font-weight: 700;
+  width: auto;
+  height: flex;
+ box-shadow: 0px 0px 14px -4px white;
+  background: linear-gradient(45deg, yellowgreen 0%, green 50%, yellow 100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom: 1em !important;
+  position: relative;
+  animation: flutuar 2.25s ease-in-out infinite alternate !important;
+ 
+}
+
+.botao-cad:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.botao-cad:active {
+  transform: scale(0.95);
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+@keyframes degrade{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+
+}
+  .img-logo {
+    width: 85px !important; 
+    height: 150px !important; 
+    margin-bottom: -175px;
+    margin-right: 360px;             
+    margin-top: 2em ;
+  }
+
+    @media screen and (max-width: 485px) {
+
+      .gradient-efeito {
+        height: 84px;
+        font-size: 64px;
+      }
+      .img-logo {
+        width: 75px !important; 
+        height: 100px !important; 
+        margin-bottom: -120px;
+        margin-right: 270px !important;             
+        margin-top: 2em !important;
+      }
+
+    }
+    
+     @media screen and (max-width: 420px) {
+
+      .gradient-efeito {
+        height: 74px;
+        font-size: 60px;
+      }
+      .img-logo {
+        width: 75px !important; 
+        height: 100px !important; 
+        margin-bottom: -120px;
+        margin-right: 285px !important;             
+        margin-top: 2em !important;
+      }
+    }
+
+    @media screen and (max-width: 380px) {
+
+      .gradient-efeito {
+        height: 54px;
+        font-size: 45px;
+      }
+      .img-logo {
+        width: 75px !important; 
+        height: 100px !important; 
+        margin-bottom: -100px;
+        margin-right: 225px !important;             
+        margin-top: 1.5em !important;
+      }
+  }
+
+    }
