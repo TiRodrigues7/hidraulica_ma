@@ -3,7 +3,7 @@
     <div class="footer-container">
         <div class="footer-column">
             <h3><strong>Sobre</strong></h3>
-            <p>Excelente Serviços de Solda na Cidade de Ourinhos - São Paulo<br><br>Hidráulica M.A oferece o melhor serviço de solda em Ourinhos. Aqui a técnica de soldagem usinagem e hidráulica é uma atividade de alto nível. Se você precisa de uma solda ou peça nova, não pense duas vezes, ligue para (14) 99798-9443.</p>
+            <p>Excelente Serviços de Solda na Cidade de Ourinhos - São Paulo<br><br>Hidráulica M.A oferece o melhor serviço de solda em Ourinhos. Aqui a técnica de soldagem usinagem e hidráulica é uma atividade de alto nível. Se você precisa de uma solda ou peça nova, não pense duas vezes, ligue para (14) 99198-3527</p>
         </div>
         <div class="footer-column">
         <h3><strong>Menu</strong></h3>
