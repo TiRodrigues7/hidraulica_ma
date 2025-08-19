@@ -28,7 +28,7 @@
                     <!-- <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-facebook"></i></a> -->
                 </div>
                 <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
-                    <button onclick="window.location.href='https://hidraulicama.com.br/sobre.php';">Saiba mais</button>
+                    <button onclick="window.location.href='https://hidraulicama.cadbit.com.br/sobre.php';">Saiba mais</button>
                 </div>
             </div>
         </div>
