@@ -20,7 +20,7 @@
         <div class="footer-column">
         <h3><strong>Contato</strong></h3>
             <p>hidraulicama@gmail.com</p>
-            <p>Tel/Whats: (14) 99905-7741</p>
+            <p>Tel/Whats: (14) 99198-3527</p>
             <h3><strong>Redes Sociais</strong></h3>
             <div class="social-icons-rodape">
                 <a href="https://api.whatsapp.com/send/?phone=5514991983527&text=Ol%C3%A1&type=phone_number&app_absent=0">
